@@ -1,0 +1,420 @@
+:root {
+    --primary: #101417;
+    --primary-brand: #B91F33;
+    --grey-light: #E1E1E1;
+    --grey: #666666;
+    --contrast: #E0E34C;
+}
+
+/***********Ajustando posição dos "alvos"***********/
+
+#academia,
+#fale {
+    scroll-margin-top: 200px;
+}
+
+#planos {
+    scroll-margin-top: 100px;
+}
+
+/*TODOS OS ELEMENTO DO HTML*/
+* {
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    /*texto em caixa alta*/
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h2 {
+    color: white;
+    font-size: 40px;
+}
+
+h3 {
+    color: white;
+    font-size: 32px;
+}
+
+ul {
+    color: var(--grey-light);
+    text-align: left;
+    font-size: 18px;
+    padding: 0;
+    list-style-position: inside;
+    /* coloca o marcador dentro da lista*/
+}
+
+p {
+    color: var(--grey-light);
+    font-size: 18px;
+}
+
+img {
+    display: block;
+
+}
+
+/****************Utilitários******************/
+.btn,
+.btn-outline {
+    background-color: var(--primary-brand);
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    padding: 10px 60px 6px 60px;
+    border-radius: 3px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--contrast);
+    color: var(--primary);
+    padding: 10px 80px 6px 80px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: solid 2px var(--primary-brand);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    border: solid 2px var(--contrast);
+}
+
+/****************Utilitários******************/
+
+
+.container {
+    max-width: 1140px;
+    height: auto;
+    margin: 0 auto;
+    padding-left: 15px !important; 
+    padding-right: 15px !important;
+    /*centraliza a div*/
+}
+
+img {
+    display: block;
+}
+
+/*Formatando apenas esse conteiner que está dentro do heard*/
+.header .container {
+    display: flex;
+    /*Iniciando do flexbox*/
+    justify-content: space-between;
+    /* eixo x*/
+    align-items: center;
+    /*eixo y*/
+
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    background-color:  rgba(85, 83, 83, 0.493);
+    backdrop-filter: blur(5px);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+}
+
+.header-scroll{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*formatando link dentro do menu*/
+.menu a {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 111px;
+}
+
+.menu a:hover {
+    color: var(--primary-brand);
+}
+
+.hero-section {
+    width: 100%;
+    height: 650px;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .container {
+    position: relative;
+    top: 50px;
+}
+
+.hero-section h1 {
+    color: var(--grey-light);
+    font-size: 96px;
+    line-height: 90%;
+    /*altura da linha*/
+}
+
+.hero-section p {
+    color: var(--grey-light);
+    font-size: 24px;
+    line-height: 120%;
+    max-width: 790px;
+}
+
+.academia {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    column-gap: 24px;
+    /*espaço entre as colunas do flex*/
+}
+
+.bg-light {
+    background-color: var(--grey-light);
+}
+
+.bg-light h2 {
+    color: var(--primary);
+}
+
+.bg-light p {
+    color: var(--grey);
+}
+
+.faca-parte {
+    padding: 40px 0;
+    position: relative;
+    /*para servir de referencia ao position:absolute da imagem*/
+}
+
+.faca-parte .content {
+    max-width: 850px;
+}
+
+.faca-parte .image {
+    position: absolute;
+    /*posição em relação ao elemento pai*/
+    bottom: 0;
+    right: 0;
+}
+
+.planos {
+    background-image: url(../img/bg-planos.jpg);
+    background-size: cover;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.planos .content {
+    max-width: 946px;
+    margin: 0 auto;
+    /*CENTRALIZA A DIV*/
+}
+
+.flex-cards {
+    display: flex;
+    column-gap: 24px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: solid 1px var(--grey-light);
+    padding: 30px;
+    border-radius: 3px;
+    transition: 0, 3s;
+}
+
+.card {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.card a {
+    display: block;
+}
+
+.destaque {
+    border: solid 3px var(--primary-brand)
+}
+
+.destaque span {
+    color: var(--contrast);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.fale-conosco {
+    display: flex;
+    column-gap: 24px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.fale-conosco input,
+.fale-conosco textarea {
+    color: white;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: solid 1px var(--grey-light);
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.fale-conosco textarea {
+    height: 140px;
+
+}
+
+.footer {
+    background-color: var(--primary-brand);
+    text-align: center;
+    padding: 14px 194px 14px 194px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.social {
+    display: flex;
+    margin: 30px 0px 100px 0px;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.social a:hover {
+    transform: translateY(-5px);
+}
+
+.social a {
+    transition: 0.3s;
+}
+
+
+/*Ajustes Finos
+z-index: 10000; pra colocar o cabeçalho por cima de qualquer imagem
+backdrop-filter: blur(5px); embaçar o fundo*/
+
+
+@media (max-width: 992px) {
+.hero-section h1 {
+font-size: 64px;
+}
+.menu {
+/*display: none;*/
+transform: translateX(100%);
+transition: 0.5s ease-out;
+background-color: var(--primary-brand);
+position: absolute;
+top: 100px;
+left: 0;
+width: 100%;
+height: 100vh; /*unidade de medida baseada na tela*/
+}
+
+.menu a{
+    display: block;
+    margin: 0;
+    padding: 20px 15px;
+    border-bottom: 2px solid var(--primary);
+}
+
+.menu-open{
+    /*display: block;*/
+    transform: translateX(0);
+    
+}
+
+.academia .image, .academia .content{
+    width: 50%;
+}
+.academia img{
+    max-width: 100%;
+}
+    .bar {
+        width: 40px;
+        height: 3px;
+        background-color: white;
+        margin-bottom: 3px;
+        transition: 0.3s;
+}
+
+.x .bar:first-child{background-color: white; transform: rotate(45deg) translate(7px,2px);}
+.x .bar:nth-child(2){opacity: 0; transform: translateX(-200px);}
+.x .bar:last-child{background-color: white; transform: rotate(-45deg) translate(6px,-2px);}
+
+.faca-parte .content{
+width: calc(100% - 200px);
+}
+.flex-cards{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+}
+.card{
+    max-width: 360px;
+}
+.fale-conosco{
+    flex-direction: column;
+    row-gap: 24px;
+}
+.mapa iframe{
+    width: 100%;
+}
+}
+
+@media (max-width: 820px) {
+.hero-section{ height: 520px;}
+.hero-section h1{font-size: 36px;}
+.hero-section p{font-size:20px;}
+h2{font-size: 32px;}
+h3{font-size: 24px;}
+.academia{flex-direction: column;}
+.academia .image, .academia .content{ 
+    width: 100%;
+    max-width: 558px;
+}
+.faca-parte .image{display: none;}
+.faca-parte .content{width: 100%;}
+.footer{padding: 14px;}
+}
+
+@media (max-width: 414px){
+.academia .fale-conosco{
+margin-top: 60px;
+margin-bottom: 60px;}
+}
