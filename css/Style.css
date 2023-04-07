@@ -31,6 +31,7 @@ html {
 body {
     margin: 0;
     background-color: var(--primary);
+    overflow-x: hidden;
 }
 
 h1,
@@ -154,13 +155,22 @@ img {
 }
 
 .menu a:hover {
-    color: var(--primary-brand);
+    background-color: rgba(94, 7, 7, 0.541);
+    color: white;
 }
-
+.bx-wrapper{
+    border: none !important;
+    box-shadow: none !important; 
+}
+.bg-1{
+    background-image: url(../img/background.jpg);
+}
+.bg-2{
+    background-image: url(../img/background-2.jpg);
+}
 .hero-section {
     width: 100%;
     height: 650px;
-    background-image: url(../img/background.jpg);
     background-size: cover;
     background-position: center;
     display: flex;

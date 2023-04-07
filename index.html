@@ -7,12 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academia HardCore</title>
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
+    <script>
+      $(document).ready(function(){
+        $(".slider").bxSlider({
+            randomStart: true,
+            controls: false,
+            auto: true,
+            pause: 3000,
+            autoHover: true,
+        });
+      });
+    </script>
+
+<link rel="stylesheet" href="css/Style.css">
 </head>
 
 <body>
@@ -39,8 +56,8 @@
 
         </div>
     </div>
-
-    <div class="hero-section">
+    <div class="slider">
+    <div class="hero-section bg-1">
         <div class="container">
 
             <h1> Lorem ipsum dolor sit amets, consectetur</h1>
@@ -54,12 +71,27 @@
         </div>
     </div>
 
+    <div class="hero-section bg-2">
+        <div class="container">
+
+            <h1> Lorem ipsum dolor sit amets, consectetur</h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur ligula ut ornare.
+                Pellentesque vulputate dictum nibh eget tempus. Integer accumsan tellus sed massa faucibus, in eleifend
+                lorem placerat.</p>
+
+            <a href="#" class="btn">Lorem Ipsum</a>
+
+        </div>
+    </div>
+    </div>
+    
     <div class="container academia" id="academia">
 
-        <div class="image">
+        <div class="image" data-aos="fade-right">
             <img src="img/aluno.jpg" alt="aluno">
         </div>
-        <div class="content">
+        <div class="content" data-aos="fade-left" data-aos-delay="400">
             <h2> Nossa Academia</h2>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, ac lacinia lorem
@@ -78,7 +110,7 @@
 
     <div class="bg-light">
         <div class="container faca-parte">
-            <div class="content">
+            <div class="content" data-aos="fade-right">
                 <h2>Faça parte do time</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu, ac
                     lacinia lorem pellentesque id. Morbi tincidunt malesuada vestibulum. Praesent at diam eros.
@@ -105,7 +137,7 @@
                 </p>
             </div>
             <div class="flex-cards">
-                <div class="card">
+                <div class="card" data-aos="fade-up">
                     <h3>Plano Mensal</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu,
                     </p>
@@ -120,7 +152,7 @@
                     <a href="#" class="btn-outline">lorem ipsun</a>
                 </div>
 
-                <div class="card destaque">
+                <div class="card destaque" data-aos="fade-up" data-aos-delay="300">
                     <h3>Plano Anual</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu,
                     </p>
@@ -135,7 +167,7 @@
                     <a href="#" class="btn">lorem ipsun</a>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="600">
                     <h3>Plano Semestral</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor interdum arcu,
                     </p>
@@ -196,8 +228,16 @@
         </div>
 
     </div>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="js/script.js"></script>
+
+
+<script>
+    AOS.init({
+        offset: -500,
+        once:true,
+    });
+  </script
 
 </body>
 

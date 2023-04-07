@@ -14,6 +14,11 @@ btnMenu.addEventListener('click', function () {
     btnMenu.classList.toggle('x');
 })
 
+menu.addEventListener('click', function(){
+    this.classList.remove('menu-open');
+    btnMenu.classList.remove('x');
+})
+
 //Evento de SCROLL 
 window.addEventListener('scroll', function () {
     //console.log("rolou");
